@@ -155,6 +155,7 @@ int main(int argc, char** argv){
     sample_cha_ctr(1, 1);
     double cur_occ, cur_rate, cur_lat, ns_per_clk;
     ns_per_clk = ((double)1e9)/((double)CHA_FREQ);
+    printf("Local Remote\n");
     while(1) {
         cur_rdtsc = rdtscp();
         if(cur_rdtsc > prev_rdtsc + SAMPLE_INTERVAL_SECS*TSC_ratio*100*1e6) {
